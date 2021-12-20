@@ -1,0 +1,47 @@
+
+<!-- <p>sample works!</p> -->
+
+<!-- <h2>Mr {{fname}} works in {{company}} Company with id {{ example()}}</h2> -->   <!--interpolation example-->
+
+
+<!-- <img [src]= 'img' alt="" height="200px" width="200px"> -->                      <!--Property binding eg-->
+<!-- <a [href]='site'> {{name1}}</a> -->                                               <!--Property binding eg-->
+
+
+<!-- <button (click)= 'magic()'>Click to SEE</button>
+<h1>{{content}}</h1>                                                               Event binding -->
+
+<label for="">enter a Magic</label>
+<input type="text" (input)= "magic($event)" >
+<button (click)= "createMagic()">click</button>
+<h1>{{content}}</h1>
+
+<!-- <div class='classColor'>Class Binding</div>
+<div [class]='colorName'>Class Bindings</div>
+<div [ngClass]='styleName'>ClAss BiNdings</div> -->                             <!--class Binding-->
+
+<!-- <div style='font-size: 20px;'>style Binding</div>
+<div [style.fontSize]='fontSize'>Style Binding</div>
+<div [ngStyle]='styleObject'>Style Binding</div>                            style Binding -->
+
+<!-- <table>
+    <tr>
+        <td>Student Details</td>
+        <td [attr.colspan]="columns"></td>
+    </tr>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Class</td>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>Raj</td>
+        <td>12th</td>
+    </tr>
+</table> -->                                                                      <!--attribute binding-->
+
+
+<!-- <input type="text" [(ngModel)]= "product">                                      
+<button (click)='createProduct()'>click</button>
+<h1>{{product}}</h1> -->                                                     <!--two way data binding-->

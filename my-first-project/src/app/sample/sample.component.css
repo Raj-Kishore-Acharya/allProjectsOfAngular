@@ -1,0 +1,13 @@
+.classColor {
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.classStyle {
+    font-size: large;
+    font-style: italic;
+}
+
+table,tr,td {
+    border:solid 1px black
+}

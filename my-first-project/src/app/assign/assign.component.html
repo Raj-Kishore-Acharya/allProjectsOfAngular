@@ -1,0 +1,5 @@
+
+<div (mouseover)="changeText=true" (mouseout)="changeText=false">
+    <div *ngIf="!changeText" [ngStyle]="{'background-color':'green'}">Hide</div>
+    <div *ngIf="changeText" [ngStyle]="{'background-color':'yellow'}">Show</div>
+</div>

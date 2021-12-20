@@ -1,0 +1,52 @@
+<h1>The Park</h1>
+<label for="">Please enter your name...</label>
+<input type="text" [(ngModel)]= 'yourName'><br><br>
+<label for="">Please enter your age...</label>
+<input type="number" [(ngModel)]='yourAge'><br><br>
+<button class= "btn btn-primary" (click)= 'verify()'>Submit</button>
+
+
+
+<!-- <div *ngIf='details'>
+    <h1>{{yourName}},these are the facilities for you...</h1>
+    <ul >
+        <li>Food</li>
+        <li>Gym</li>
+        <li *ngIf= 'pubPass()'>Pub</li>
+        <li *ngIf= 'poolPass()'>Swimming Pool</li>
+    </ul>
+</div> -->
+
+<!-- <div *ngIf='details'>
+    <h1 [ngStyle]="{'color':'blue'}">{{yourName}},these are the facilities for you...</h1>
+    <ul >
+        <li [ngStyle]="{'color':'green'}">Food</li>
+        <li [ngStyle]="{'color':'green'}">Gym</li>
+        <li [ngStyle]= "{'color' :pubPass()}">Pub</li>
+        <li [ngStyle]= "{'color' :poolPass()}">Swimming Pool</li>
+    </ul>
+</div> -->
+
+<div *ngIf='details'>
+    <h1 [ngStyle]="{'color':'blue'}">{{yourName}},these are the facilities for you...</h1>
+    <ul >
+        <li [ngClass]="'success'">Food</li>
+        <li [ngClass]="'success'">Gym</li>
+        <li [ngClass]= "pubPass()">Pub</li>
+        <li [ngClass]= "poolPass()">Swimming Pool</li>
+    </ul>
+</div>
+
+
+<h1 style="color: crimson;">These are Our Employees</h1>
+<ul *ngFor="let emp of empDetails ; first as f; last as l;even as e;odd as o">
+    <li>
+        <h4>{{emp.empName}}</h4>
+        <p>{{emp.empDesignation}}</p>
+        <p *ngIf="f">This is Important</p>
+        <p *ngIf="l">This is last Emp</p>
+        <p *ngIf="e">This Is Even</p>
+        <p *ngIf="o">This is Odd </p>
+    </li>
+
+</ul>

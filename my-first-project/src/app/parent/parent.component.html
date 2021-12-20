@@ -1,0 +1,11 @@
+<div style="background-color:chocolate;height :100px;">
+    <p>this is parent component</p>
+    <input type="text" [(ngModel)]= "instruction">
+    <h4>{{ replyFromChild }}</h4>      
+</div>
+
+<app-child [getInstruction]= "instruction" (childEvent) = "receiveData($event)">
+    <h1>hello</h1>                                                      <!--Content Projection-->
+    <h2>hello Again</h2>                                                <!--Content Projection-->
+</app-child>
+

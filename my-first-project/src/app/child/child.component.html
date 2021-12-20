@@ -1,0 +1,7 @@
+<!-- <p>{{details.bikeOwner}} has {{details.bikeColor}} color {{details.bikeName}} bike.</p> -->
+<div style="height: 100px; background-color: cornflowerblue;"> 
+    <p>This is Child Component</p>
+    <h5> {{ getInstruction }}</h5>
+    <input type="text" (input)=replyMethod($event)>
+</div>
+<ng-content select='h2'></ng-content>                       <!--Content Projection-->

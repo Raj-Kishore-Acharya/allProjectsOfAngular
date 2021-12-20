@@ -1,0 +1,4 @@
+<p>first works!</p>
+<input type="text" [(ngModel)]= "empName">
+<button  (click)= toggleChild()>click</button>
+<app-second *ngIf="isChild" [empName1]="empName"></app-second>
