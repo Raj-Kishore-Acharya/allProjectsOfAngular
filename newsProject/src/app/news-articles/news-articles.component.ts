@@ -8,7 +8,7 @@ import { NewsService } from '../news.service';
 })
 export class NewsArticlesComponent implements OnInit {
   products;
-  searchItem;
+  searchItem  ;
   newsArt= true ;
   isLoading = true;
 
@@ -19,9 +19,7 @@ export class NewsArticlesComponent implements OnInit {
   }
 
 getAllNews() {
-  // if(this.searchItem = " ") {
-  //   this.newsArt = false;
-  // }
+    // this.art.onRequest(this.searchItem);
     this.art.getNews().subscribe((res) => {
       this.isLoading=false
       this.products = res.articles
