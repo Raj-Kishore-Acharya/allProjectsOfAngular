@@ -21,12 +21,16 @@ export class Query2Component implements OnInit, AfterViewInit, AfterContentInit 
   ngAfterViewInit(): void {
       //  console.log(this.heading);                                             //view Queries- @viewChild
       // console.log(this.heading.nativeElement);                               //view Queries- @viewChild
-      // console.log(this.heading.nativeElement.innerText);                     //view Queries- @viewChild
+      // console.log(this.heading.nativeElement.innerText);
+      // this.heading.nativeElement.innerText="raj wat fellow"                     //view Queries- @viewChild
 
       console.log(this.headings);                                       //view Queries- @viewChildren
       this.headings.forEach(element => {                            
         console.log(element.nativeElement.innerText);                     //view Queries- @viewChildren
-      })
+        element
+        .nativeElement.innerText="raj wat fellow"                     //view Queries- @viewChild
+
+})
   }
 
   ngAfterContentInit(): void {
