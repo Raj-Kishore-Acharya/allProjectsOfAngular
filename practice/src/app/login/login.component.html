@@ -1,0 +1,28 @@
+<div>
+    {{message}}
+</div>
+
+<div class="col-md-6 offset-md-5">
+    <div class="card" style="width: 18rem;">
+        <h3 style="text-align: center;">Log In</h3>
+        <div class="card-body">
+          <form [formGroup]='logInForm' (ngSubmit)='onSubmit()'>
+            <div class="mb-3">
+                <label for="mail" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="mail" name="email" formControlName='email'>
+            </div>
+
+            <div class="mb-3">
+                <label for="pwd" class="form-label">Password</label>
+                <input type="password" class="form-control" id="pwd" name="password" formControlName='password'>
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" [disabled]='logInForm.invalid' class="btn btn-success">login</button>
+            </div>
+
+            <a routerLink="/register">Not Registered yet?? Please Register!!!</a>
+          </form>
+        </div>
+      </div>
+</div>

@@ -1,0 +1,22 @@
+<p>mock2 works!</p>
+<!-- <div class="card">
+    <p>{{receiveData.name}}</p>
+    <p>{{receiveData.password}}</p>
+    <p>{{receiveData.email}}</p>
+    <p>{{receiveData.number}}</p>
+</div> -->
+
+<table>
+    <tr>
+        <td>name</td>
+        <td>password</td>
+        <td>email</td>
+        <td>number</td>
+    </tr>
+    <tr *ngFor= 'let data of receiveData'>
+        <td>{{data.name}}</td>
+        <td>{{data.password}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.number}}</td>
+    </tr>
+</table>

@@ -1,0 +1,101 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="header-name">{{display.name}}</span>
+    <span class="icon-holder">
+      <img [src]="display.photo" alt="" height="50px" width="50px">
+    </span>
+  </div>
+</nav>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-3 mt-3">
+      Graph
+    </div>
+    <div class="col-6">
+      <div class="row">
+        <div class="col-4 mt-5">
+          <img [src]="display.photo" alt="img" height="200px" width="150px">
+        </div>
+        <div class="col-8 mt-3">
+          <div class="card">
+            <div class="card-body">
+              <form #loginForm='ngForm' (ngSubmit)='onSubmit(loginForm)'>
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" id="name" ngModel #nameField='ngModel'
+                  [(ngModel)]='display.name' required>
+    
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" name="date" id="date" ngModel #dateField='ngModel'
+                  [(ngModel)]='display.date' required>
+    
+                <label for="email" class="form-label">E-Mail</label>
+                <input type="email" class="form-control" name="email" id="email" ngModel #emailField='ngModel'
+                  [(ngModel)]='display.email' required>
+    
+                <label for="symptoms" class="form-label">Symptoms</label>
+                <input type="text" class="form-control" name="symptoms" id="symptoms" ngModel #symptomsField='ngModel'
+                  [(ngModel)]='display.symptoms' required>
+    
+                <label for="diagnosis" class="form-label">Diagnosis</label>
+                <input type="text" class="form-control" name="diagnosis" id="diagnosis" ngModel #diagnosisField='ngModel'
+                  [(ngModel)]='display.diagnosis' required>
+    
+    
+    
+                <label for="radio" class="form-label mt-3 "></label>
+                <input type="radio" class="form-check-inpu ms-1" name="radio" id="name">inpatient
+                <input type="radio" class="form-check-inpu ms-3" name="radio" id="radio">patient
+    
+                <div class="card-footer mt-3">
+                  <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary" (click)="updateProduct()">Save</button>
+                  <button type="reset" class="btn btn-secondary ms-3">Reset</button>
+                </div>
+    
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3 mt-3" >
+    <div class="card">
+      <input type="search" class="form-control" placeholder="search" [(ngModel)]='searchItem'>
+      <div class="card-body" *ngFor="let detail of details | image :searchItem" [ngClass]="check(detail)">
+        <div (mouseover)="action(detail)">
+          <img [src]="detail.photo" alt="" height="50px" width="50px">
+          {{detail.name}}
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row mt-5 ms-3">
+  <div class="col">
+    <table class="table table-striped">
+      <tr>
+        <th></th>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Diagnosis</th>
+        <th>Symptoms</th>
+      </tr>
+      <tr *ngFor="let detail of details; index as i" [ngClass]="check(detail)" (mouseover)="action(detail)">
+        <td>{{i+1}}</td>
+        <td>{{detail.date}}</td>
+        <td>{{detail.name}}</td>
+        <td>{{detail.email}}</td>
+        <td>{{detail.symptoms}}</td>
+        <td>{{detail.diagnosis}}</td>
+      </tr>
+    </table>
+
+  </div>
+
+</div>

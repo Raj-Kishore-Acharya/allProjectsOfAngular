@@ -10,7 +10,7 @@ export class FirstComponent implements OnInit, OnDestroy, OnChanges, DoCheck, Af
   empName;
   
   toggleChild() {
-    this.isChild=true;
+    this.isChild= !this.isChild;
   }
 
   constructor() {
@@ -24,36 +24,36 @@ export class FirstComponent implements OnInit, OnDestroy, OnChanges, DoCheck, Af
   }
 
   ngOnChanges() {
-    console.log('child ngOnChanges is called');
+    console.log('Parent ngOnChanges is called');
     
   }
  
   ngOnDestroy() {
-    console.log('child ngOnDestroy is called')
+    console.log('Parent ngOnDestroy is called')
   }
 
   ngDoCheck(): void {
-      console.log('child DoCheck is called');
+      console.log('Parent DoCheck is called');
       
   }
 
   ngAfterContentInit(): void {
-      console.log('child After ContentInIt');
+      console.log('Parent After ContentInIt');
       
   }
 
   ngAfterContentChecked(): void {
-      console.log('contentChecked is called');
+      console.log('Parent contentChecked is called');
       
   }
 
   ngAfterViewInit(): void {
-      console.log('viewInIt is called');
+      console.log('Parent viewInIt is called');
       
   }
 
   ngAfterViewChecked(): void {
-      console.log('viewChecked is called');
+      console.log('Parent viewChecked is called');
       
   }
   

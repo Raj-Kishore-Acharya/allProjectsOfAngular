@@ -1,0 +1,39 @@
+<div>
+    {{message}}
+</div>
+<div class="col-md-6 offset-md-4">
+    <div class="card" style="width: 25rem;">
+        <h3 style="text-align: center;">Register Form</h3>
+        <div class="card-body">
+            <form [formGroup]='register' (ngSubmit)='onSubmit()'>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name :</label>
+                    <input type="text" class="form-control" id="name" name="name" formControlName='userName'>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-Mail :</label>
+                    <input type="email" class="form-control" id="email" name="email" formControlName='email'>
+                </div>
+
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Password :</label>
+                    <input type="password" class="form-control" id="pwd" name="password" formControlName='password'>
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone :</label>
+                    <input type="number" class="form-control" id="phone" name="phone" formControlName='phone'>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" [disabled]='register.invalid
+                    ' class="btn btn-success ">Register</button>
+                </div>
+
+                <a routerLink="/login">Already Registered ?? Click to Login</a>
+
+            </form>
+        </div>
+    </div>
+</div>

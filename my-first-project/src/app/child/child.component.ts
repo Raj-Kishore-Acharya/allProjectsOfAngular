@@ -21,6 +21,7 @@ export class ChildComponent implements OnInit {
   childEvent = new EventEmitter() ;
   replyMethod(event:any) {
     this.childEvent.emit(event.target.value)
+    // console.log(event)
   }
 
   

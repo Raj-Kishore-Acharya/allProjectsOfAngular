@@ -1,0 +1,10 @@
+<div>Raj</div>
+<button type="button" (click)='onSubmit()'>click</button>
+<input type="text" [(ngModel)]='data'>
+<div *ngIf='display'>
+<app-child2 [allData]='data'>
+    <h3>Radheshyam Sahu</h3>
+    <h3>Prasant Kumar</h3>
+    <h3>Biswanath PAdhy</h3>
+</app-child2>
+</div>

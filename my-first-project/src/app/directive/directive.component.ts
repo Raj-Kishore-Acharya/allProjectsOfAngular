@@ -15,35 +15,35 @@ export class DirectiveComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // pubPass() {
-  //   if(this.yourAge>=21) {
-  //     return "Green";
-  //   } else {
-  //     return "Red";
-  //   }
-  // }
-  // poolPass() {
-  //   if(this.yourAge>=10) {
-  //     return "green";
-  //   } else {
-  //     return "red";
-  //   }
-  // }
-
   pubPass() {
     if(this.yourAge>=21) {
-      return "success";
+      return "Green";
     } else {
-      return "failure";
+      return "Red";
     }
   }
   poolPass() {
     if(this.yourAge>=10) {
-      return "success";
+      return "green";
     } else {
-      return "failure";
+      return "red";
     }
   }
+
+  // pubPass() {
+  //   if(this.yourAge>=21) {
+  //     return "success";
+  //   } else {
+  //     return "failure";
+  //   }
+  // }
+  // poolPass() {
+  //   if(this.yourAge>=10) {
+  //     return "success";
+  //   } else {
+  //     return "failure";
+  //   }
+  // }
 
   verify() {
     if(this.yourAge==null) {

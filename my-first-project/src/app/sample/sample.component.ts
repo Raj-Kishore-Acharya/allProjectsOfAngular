@@ -59,10 +59,10 @@ export class SampleComponent implements OnInit {
   //   return Math.random();
   // }
 
-  // magic() {
-  //   alert("no magic.. Shut up")
+  magic() {
+    alert("no magic.. Shut up")
     
-  // }
+  }
   
 
   // magic() {
@@ -70,12 +70,14 @@ export class SampleComponent implements OnInit {
   // }
 
 
-magic(event:any) {
-    this.newMagic = event.target.value;
-}
-createMagic() {
-  this.content= `${this.newMagic} magic hase been created`;
-}
+// magic(event:any) {
+//     this.newMagic = event.target.value;
+// }
+// createMagic() {
+//   this.content= `${this.newMagic} magic hase been created`;
+// }
+
+
 
 
   // createProduct() {

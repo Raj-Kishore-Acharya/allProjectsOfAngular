@@ -1,0 +1,94 @@
+{
+  "details": [
+    {
+      "id": 1,
+      "name": "Nancy Acharya",
+      "date": "2020-01-05",
+      "photo": "https://www.htmlelements.com/demos/images/people/nancy.jpg",
+      "email": "ndavolio@msn.com",
+      "symptoms": "Aerophobia",
+      "diagnosis": "Fear of Flying"
+    },
+    {
+      "id": 2,
+      "name": "Andrew Fuller",
+      "date": "2021-04-17",
+      "photo": "https://www.htmlelements.com/demos/images/people/andrew.jpg",
+      "email": "afuller@msn.com",
+      "symptoms": "Pyrophobia",
+      "diagnosis": "Fear of Fire"
+    },
+    {
+      "id": 3,
+      "name": "John Levering",
+      "date": "2021-04-23",
+      "photo": "https://www.htmlelements.com/demos/images/people/john.jpg",
+      "email": "jlevering@msn.com",
+      "symptoms": "Aerophobia",
+      "diagnosis": "Fear of Flying"
+    },
+    {
+      "id": 4,
+      "name": "Maria Peacock",
+      "date": "2021-11-18",
+      "photo": "https://www.htmlelements.com/demos/images/people/maria.jpg",
+      "email": "mpeacock@msn.com",
+      "symptoms": "Necrophobia",
+      "diagnosis": "Fear of death and dead things"
+    },
+    {
+      "id": 5,
+      "name": "Steven Buchanan",
+      "date": "2021-04-10",
+      "photo": "https://www.htmlelements.com/demos/images/people/steven.jpg",
+      "email": "sbuchanan@msn.com",
+      "symptoms": "Megalophobia",
+      "diagnosis": "Fear of large things"
+    },
+    {
+      "id": 6,
+      "name": "Mark Suyama",
+      "date": "2021-08-23",
+      "photo": "https://www.htmlelements.com/demos/images/people/mark.jpg",
+      "email": "msuyama@msn.com",
+      "symptoms": "Microphobia",
+      "diagnosis": "Fear of Small Things"
+    },
+    {
+      "id": 7,
+      "name": "Laura Chauhan",
+      "date": "2021-06-23",
+      "photo": "https://www.htmlelements.com/demos/images/people/laura.jpg",
+      "email": "lcallahan@msn.com",
+      "symptoms": "Obesophobia",
+      "diagnosis": "Fear of gaining Weight"
+    },
+    {
+      "id": 8,
+      "name": "Robert King ",
+      "date": "2012-04-23",
+      "photo": "https://www.htmlelements.com/demos/images/people/robert.jpg",
+      "email": "rking@msn.com",
+      "symptoms": "Pathophobia",
+      "diagnosis": "Fear of Disease"
+    },
+    {
+      "id": 9,
+      "name": "Anne Barone",
+      "date": "2019-04-23",
+      "photo": "https://www.htmlelements.com/demos/images/people/anne.jpg",
+      "email": "abarone@msn.com",
+      "symptoms": "Tachophobia",
+      "diagnosis": "Fear of Speed"
+    },
+    {
+      "id": 10,
+      "name": "Janet Peterson ",
+      "date": "2021-08-23",
+      "photo": "https://www.htmlelements.com/demos/images/people/janet.jpg",
+      "email": "jpeterson@msn.com",
+      "symptoms": "Zoophobia",
+      "diagnosis": "Fear of Animals"
+    }
+  ]
+}

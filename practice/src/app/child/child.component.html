@@ -1,0 +1,13 @@
+<div style="height: 100px; background-color: brown; color: burlywood;">
+    <p>This Is Child Component</p>
+    <h3>{{getInstruction}}</h3>
+    <input type="text" (input)='giveReply($event)'>
+    <!-- <button type="submit" (click)="onClick($event)">click</button> -->
+</div>
+
+<h3 #child>Raj Here</h3>
+<h3 #child>Chinu</h3>
+<h3 #child>Situ Here</h3>
+<h3 #child>Prasant</h3>
+
+<ng-content></ng-content>

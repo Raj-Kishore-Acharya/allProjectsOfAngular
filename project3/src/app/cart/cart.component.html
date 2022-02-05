@@ -1,0 +1,23 @@
+
+
+<div class="col-md-6 offset-md-3">
+<div class="card mb-3 bg-warning" style="max-width: 540px;" *ngFor= 'let product of addedProduct'>
+  <div class="row g-0" >
+    <div class="col-md-4 mt-2">
+      <img [src]="product.image" class="img-fluid rounded-start" alt="..." >
+    </div>
+    <div class="col-md-8 mt-2">
+      <div class="card-body">
+        <button type="button"  class="btn-close float-end" (click)='delete(product)'></button>
+
+        <h3 style="color: crimson;">{{product.productName}}</h3>
+        <p>{{product.description}}</p>
+        <h5 style="color: darkgreen;">{{product.price | currency : 'INR'}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<button type="submit" class="btn btn-success center" data-bs-dismiss="modal" aria-label="Close" (click)='onClick()'>check out</button>
+
+</div>
+

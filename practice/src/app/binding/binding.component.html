@@ -1,0 +1,29 @@
+{{data}}
+{{'Raj Kishore'}}
+{{datas.name}}
+{{datas.age}} <br>
+{{data1[3]}}
+
+<div [class]='colors()'>My name is Raj Kishore Acharya</div>
+<div [style.color]='color2'>This is Braja Kishore Acharya</div>
+
+<table style="border: aqua 2px solid;">
+  <tr>
+      <th >Details</th>
+      <td [attr.colspan]='num'></td>
+  </tr>
+  <tr>
+      <td>id</td>
+      <td>name</td>
+      <td>age</td>
+  </tr>
+  <tr>
+      <td>1</td>
+      <td>raj</td>
+      <td>24</td>
+  </tr>
+</table>
+
+<p *ngIf= 'show'>{{content}}</p>
+<button type="submit" (click)='onClick()'>click</button>
+

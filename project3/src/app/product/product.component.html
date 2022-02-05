@@ -1,0 +1,55 @@
+<div class="container-fluid mt-2">
+<div class="col-md-12">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://cdn.pixabay.com/photo/2015/05/28/09/08/hyacinth-787758__340.jpg" height="350px" width="200px" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.pixabay.com/photo/2016/06/03/11/39/vegan-1433236__340.png" height="350px" width="200px" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.treehugger.com/thmb/H4_upte1F4IP7hZvfLPDDQwInpI=/800x600/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2016__06__Thefirstwealthishealth.2-f9df36d973674ca39cdc12a42ad6c2d3.jpg" height="350px" width="200px" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+</div>
+<marquee class="mt-2" behavior="alternate" direction="right" style="color: black; background-color: salmon;">Follow your dreams, work hard, practice, and persevere. Make sure you eat a variety of foods, get plenty of exercise, and maintain a healthy lifestyle.</marquee>
+
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-md-4 mt-2" *ngFor= 'let product of products'>
+            <div class="card" style="background-color: sandybrown;" >
+                <img [src]="product.image" class="card-img-top" height="250px" width="250px">
+                <div class="card-body">
+                  <div>
+                     Fruit Name : {{product.productName}}
+                  </div>
+                  <span>
+                     Price : {{product.price}}
+                  </span>
+                  <div>
+                      {{product.description}}
+                  </div>
+                </div>
+                <div class="card-footer" *ngIf='this.data.onLogin()'>
+                    <button type="button" class="btn btn-success" (click)='onClick(product)'>Add to Cart</button>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

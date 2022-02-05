@@ -1,0 +1,13 @@
+<div style="color: aqua; height: 100px; background-color: black;">
+    <p>This is Patrent Component</p>
+    <input type="text" [(ngModel)]='instruction'>
+    <h3>{{reply}}</h3>
+</div>
+
+<app-child [getInstruction]='instruction' (childEvent)='getReply($event)'>
+<h3 #parent>Raj</h3>
+<h3 #parent>Kishore</h3>
+<h3 #parent>Acharya</h3>
+<h3 #parent>Sonu</h3>
+
+</app-child>

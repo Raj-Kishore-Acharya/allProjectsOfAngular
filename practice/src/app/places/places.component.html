@@ -1,0 +1,64 @@
+<table>
+    <tr appColor>
+        <td>Place</td>
+        <td>Distance</td>
+        <td>Weather</td>
+    </tr>
+    <tr *ngFor= 'let place of places'>
+        <td>{{place.PName}}</td>
+        <td>{{place.distance}}</td>
+        <td>{{place.weather}}</td>
+    </tr>
+</table>
+
+
+
+<div *ngFor='let num of array'>
+    <span>{{num}}</span>
+</div>
+
+<input type="text" placeholder="give a number" [(ngModel)]='num1'><br>
+<input type="text" placeholder="Give a number" [(ngModel)]='num2'>
+
+<div>
+    {{number}}
+</div>
+
+<button type="submit" class="btn btn-success" (click)='sum()'>+</button>
+<button type="submit" class="btn btn-danger" (click)='sub()'>-</button>
+<button type="submit" class="btn btn-success" (click)='div()'>/</button>
+<button type="submit" class="btn btn-danger" (click)='multi()'>*</button>
+
+
+<div class="cold-md-6 offset-md-4">
+    <form #loginForm='ngForm' (ngSubmit)='onSubmit(loginForm)'>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" ngModel #nameField="ngModel"> 
+        </div>
+
+        <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" class="form-control" id="age" name="age" ngModel #ageField="ngModel"> 
+        </div>
+
+        <button type="submit" class="btn btn-success">submit</button>
+    </form>
+</div>
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+    <tr *ngFor='let data of formData'>
+        <td>{{data.name}}</td>
+        <td>{{data.age}}</td>
+    </tr>
+</table>
+
+
+
+
+
+

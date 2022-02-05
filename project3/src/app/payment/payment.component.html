@@ -1,0 +1,21 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+     <table class="table">
+        <tr >
+            <td >Product</td>
+            <td >Price</td>
+        </tr>
+        <tr *ngFor='let product of checkOut'>
+            <td >{{product.productName}}</td>
+            <td #field>{{product.price}}</td>
+        </tr>
+        <tr>
+            <td>Grand Total</td>
+            <td>{{price}}</td>
+        </tr>
+        <tfoot>
+            <button type="submit" class="btn btn-info" (click)='onClick()'>Purchase</button>
+        </tfoot>
+     </table>
+    </div>
+</div>

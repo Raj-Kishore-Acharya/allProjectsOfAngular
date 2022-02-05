@@ -1,0 +1,205 @@
+<div style="background-color: lavender;">
+    <h3>Euro Air</h3>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div style="border: 1px solid gray;">
+            <div style="border: 2px solid gray;box-shadow: 2px 2px gray;" (click)="form()" [ngClass]="color()">
+                <h5 class="text-center">Look for a Flight</h5>
+            </div>
+            <div *ngIf="dis">
+                <form class="col-md-8 offset-md-2">
+                    <label for="" class="form-label ms-3 ">Trip : </label>
+                    <input type="radio" class="form-check-input" name="radio">One-way
+                    <input type="radio" class="form-check-input ms-3" name="radio">Return <br><br>
+                    <label for="">From:</label>
+                    <select name="" id="">
+                        <option value="--select--">--select--</option>
+                        <option value="Hyd">Hyderabad</option>
+                        <option value="Bnglr">Bengaluru</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                    </select><br><br>
+                    <label for="" class="form-label ms-3">To:</label>
+                    <select name="" id="">
+                        <option value="--select--">--select--</option>
+                        <option value="Hyd">Hyderabad</option>
+                        <option value="Bnglr">Bengaluru</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                    </select> <br> <br>
+                    <label for="" class="form-label ms-3">Departure :</label>
+                    <input type="date" class="form-control">
+                    <label for="" class="form-label ms-3">Adults :</label>
+                    <input type="number" class="form-control">
+                    <label for="" class="form-label ms-3">Children :</label>
+                    <input type="number" class="form-control">
+                </form>
+            </div>
+
+        </div>
+
+        <div style="border: 1px solid gray;">
+            <div style="border: 2px solid gray;box-shadow: 2px 2px gray; " (click)="form1()" [ngClass]="color1()">
+                <h5 class="text-center">Hotels</h5>
+            </div>
+            <div *ngIf="dis1">
+                <form class="col-md-8 offset-md-2">
+                    <label class="form-label">Where :</label>
+                    <input type="text" class="form-control">
+                    <label class="form-label">Check In : </label>
+                    <input type="date" class="form-control">
+                    <label class="form-label">Check Out :</label>
+                    <input type="date" class="form-control">
+                    <button class="btn btn-light">SEARCH</button>
+                </form>
+            </div>
+        </div>
+        <div style="border: 1px solid gray;">
+            <div style="border: 2px solid gray;box-shadow: 3px 3px rgb(128, 128, 128); " (click)="form2()"
+                [ngClass]="color2()">
+                <h5 class="text-center">Cars</h5>
+            </div>
+            <div *ngIf="dis2">
+                <form class="col-md-8 offset-md-2">
+                    <label class="form-label">Where :</label>
+                    <input type="text" class="form-control">
+                    <label class="form-label">PickUp Car : </label>
+                    <input type="date" class="form-control">
+                    <label class="form-label">Return Car :</label>
+                    <input type="date" class="form-control">
+                    <button class="btn btn-light">SEARCH</button>
+                </form>
+            </div>
+
+        </div>
+        <div style="border: gray;">
+            <div style="border: 2px solid gray;box-shadow: 2px 2px gray; " (click)="form3()" [ngClass]="color3()">
+                <h5 class="text-center">Register</h5>
+            </div>
+            <div *ngIf="dis3">
+                <form class="col-md-8 offset-md-2">
+                    <label for="">First Name</label>
+                    <input type="text" class="form-control">
+                    <label for="">Last Name</label>
+                    <input type="text" class="form-control">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control">
+                    <label for="">Confirm Password</label>
+                    <input type="password" class="form-control">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-7" style="border: 1px solid gray;box-shadow: 2px 2px gray;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="offers1()" [ngClass]="offerclr()">OFFERS</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="regular()" [ngClass]="regularclr()">REGULAR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="info()" [ngClass]="infoclr()">INFO</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- offer table -->
+        <table class="table table-hover" *ngIf="offer">
+            <tbody>
+                <tr>
+                    <th>Direction</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                    <th>Tickets Available</th>
+
+                </tr>
+
+
+                <tr *ngFor="let data of offers">
+                    <td>{{data.direction}}</td>
+                    <td>{{data.date}}</td>
+                    <td>{{data.price}}</td>
+                    <td>{{data.tickets}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- regular table -->
+        <table class="table table-hover" *ngIf="reg">
+            <tbody>
+                <tr>
+                    <th>Direction</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                    <th>Tickets Available</th>
+                    <th>Status</th>
+                </tr>
+                <tr *ngFor="let data of regulardata">
+                    <td>{{data.direction}}</td>
+                    <td>{{data.date}}</td>
+                    <td>{{data.price}}</td>
+                    <td>{{data.tickets}}</td>
+                    <td>{{data.comments}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- info table-->
+        <table class="table table-hover" *ngIf="infoo">
+            <tbody>
+                <tr>
+                    <th>Flight No</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Departs</th>
+                    <th>Arrives</th>
+
+                </tr>
+                <tr *ngFor="let data of infodata">
+                    <td>{{data.FlightNo}}</td>
+                    <td>{{data.From}}</td>
+                    <td>{{data.To}}</td>
+                    <td>{{data.Departs}}</td>
+                    <td>{{data.Arrives}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div>
+    <div style="border: 2px solid gray;box-shadow: 2px 2px gray; " class="dropdown dropdown-toggle"
+        data-bs-toggle="dropdown">
+        <h5>Hotels</h5>
+    </div>
+    <div class="dropdown-menu">
+        <form class="px-4 py-3">
+            <label class="form-label">Where :</label>
+            <input type="text" class="form-control">
+            <label class="form-label">Check In : </label>
+            <input type="date" class="form-control">
+            <label class="form-label">Check Out :</label>
+            <input type="date" class="form-control">
+            <button class="btn btn-light">SEARCH</button>
+        </form>
+    </div>
+</div>

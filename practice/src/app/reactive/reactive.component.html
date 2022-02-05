@@ -1,0 +1,43 @@
+<div class="col-md-5 offset-md-4">
+    <div class="card">
+        <div class="card-header">Reactive Form</div>
+        <div class="card-body">
+            <form [formGroup]='loginForm' (ngSubmit) = 'onSubmit()' >
+                <div class="mb-3">
+                    <label for="name" class="form-label" >Name</label>
+                    <input type="text" class="form-control" id="name" formControlName='name'>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label" >Password</label>
+                    <input type="password" class="form-control" id="password" formControlName='password'>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label" >Email</label>
+                    <input type="email" class="form-control" id="email" formControlName='email'>
+                </div>
+
+                <div class="mb-3">
+                    <label for="number" class="form-label">Number</label>
+                    <input type="number" class="form-control" id="number" formControlName='number'>
+                </div>
+
+                <div class="mb-3" formArrayName='hobbies'>
+                    <div>
+                        <button type="button" class="success" (click)='onClick()'>Add</button>
+                    </div>
+
+                    <div *ngFor= 'let data of allControl; index as i'>
+                        <input type="text" class="form-control" placeholder="add hobbies">
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

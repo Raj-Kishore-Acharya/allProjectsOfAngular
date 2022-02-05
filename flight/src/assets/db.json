@@ -1,0 +1,186 @@
+{
+    "offers" : [
+        {
+         "direction" : "Warsaw PL-Minsk International 2 BY",
+         "date" : "20 January",
+         "time" : "19.22 > 22.36",
+         "price" : "$311.00",
+         "save" : "$30.00",
+         "Ticket" : "21",
+         "status" : "open"
+        },
+        {
+            "direction" : "Vilnius LT-Kiev Zhulhany UA",
+            "date" : "25 January",
+            "time" : "00.47 > 03.02",
+            "price" : "$220.00",
+            "save" : "$86.00",
+            "Ticket" : "61",
+            "status" : "open"
+         },
+         {
+            "direction" : "Tallin EE-Berlin Tegel DE",
+            "date" : "29 January",
+            "time" : "19.47 > 22.02",
+            "price" : "$90.00",
+            "save" : "$12.00",
+            "Ticket" : "34",
+            "status" : "open"
+        },
+        {
+            "direction" : "St. Petersburg Pulkovo- Tallin Estonia",
+            "date" : "30 January",
+            "time" : "09.12 > 12.26",
+            "price" : "$450.00",
+            "save" : "$214.00",
+            "Ticket" : "74",
+            "status" : "Last Deals"
+        },
+        {
+            "direction" : "St. Petersburg Pulkovo- Tallin Estonia",
+            "date" : "19 January",
+            "time" : "07.15 > 10.29",
+            "price" : "$450.00",
+            "save" : "$132.00",
+            "Ticket" : "94",
+            "status" : "Available Soon"
+        },
+        {
+            "direction" : "Prague CZ-St. Petersburg Pulkovo",
+            "date" : "13 January",
+            "time" : "00.55 > 03.10",
+            "price" : "$140.00",
+            "save" : "$89.00",
+            "Ticket" : "67",
+            "status" : "Last Deals"
+        },
+        {
+            "direction" : "Prague CZ - St. Petersburg Pulkovo",
+            "date" : "17 January",
+            "time" : "01.14 > 15.42",
+            "price" : "$256.00",
+            "save" : "$87.00",
+            "Ticket" : "59",
+            "status" : "Last deals"
+        }
+    ],
+    
+    "regular" : [
+        {
+            "number" : "ESP738",
+            "direction" : "Warsaw PL - Minsk International 2 BY",
+            "date" : " 18 January 2020",
+            "departs" : "20.10",
+            "arrives" : "23.24",
+            "comments" : "Landed"
+        },
+        {
+            "number" : "LET598",
+            "direction" : "Warsaw PL - Minsk International 2 BY",
+            "date" : " 20 January 2020",
+            "departs" : "19.22",
+            "arrives" : "22.36",
+            "comments" : "On Time"
+        },
+        {
+            "number" : "LET598",
+            "direction" : "Vilnius LT- Kiev Zhulhany UA",
+            "date" : " 24 January 2020",
+            "departs" : "19.47",
+            "arrives" : "22.02",
+            "comments" : "Landed"
+        },
+        {
+            "number" : "LET598",
+            "direction" : "Tallin EE - Berlin Tegel DE",
+            "date" : " 29 January 2020",
+            "departs" : "19.47",
+            "arrives" : "22.02",
+            "comments" : "Landed"
+        },
+        {
+            "number" : "RUS677",
+            "direction" : "Kiev Zhulhany UA-Moscow Vnukovo RU",
+            "date" : " 5 January 2020",
+            "departs" : "17.11",
+            "arrives" : "20.21",
+            "comments" : "On Time"
+        },
+        {
+            "number" : "DEU545",
+            "direction" : "Kiev Zhulhany UA-Moscow Vnukovo RU",
+            "date" : " 14 January 2020",
+            "departs" : "17.49",
+            "arrives" : "20.04",
+            "comments" : "On Time"
+        },
+        {
+            "number" : "CZR219",
+            "direction" : "Warsaw PL - Minsk International 2 BY",
+            "date" : "25 January 2020",
+            "departs" : "14.35",
+            "arrives" : "17.49",
+            "comments" : "On Time"
+        }
+    ],
+
+    "info" : [
+        {
+            "flight" : "ESP738",
+            "from" : "Vilnius",
+            "to" : "Kiev",
+            "departs" : "00.47",
+            "arrives" : "03.02",
+            "status" : "Landed"
+        },
+        {
+            "flight" : "ESP738",
+            "from" : "Vilnius",
+            "to" : "Kiev",
+            "departs" : "00.47",
+            "arrives" : "03.02",
+            "status" : "Landed"
+        },
+        {
+            "flight" : "ESP738",
+            "from" : "Vilnius",
+            "to" : "Kiev",
+            "departs" : "00.47",
+            "arrives" : "03.02",
+            "status" : "Landed"
+        },
+        {
+            "flight" : "ESP738",
+            "from" : "Vilnius",
+            "to" : "Kiev",
+            "departs" : "00.47",
+            "arrives" : "03.02",
+            "status" : "Landed"
+        },
+        {
+            "flight" : "ESP738",
+            "from" : "Vilnius",
+            "to" : "Kiev",
+            "departs" : "00.47",
+            "arrives" : "03.02",
+            "status" : "Landed"
+        },
+        {
+            "flight" : "ESP738",
+            "from" : "Vilnius",
+            "to" : "Kiev",
+            "departs" : "00.47",
+            "arrives" : "03.02",
+            "status" : "Landed"
+        },
+        {
+            "flight" : "ESP738",
+            "from" : "Vilnius",
+            "to" : "Kiev",
+            "departs" : "00.47",
+            "arrives" : "03.02",
+            "status" : "Landed"
+        }
+    ]
+    
+}

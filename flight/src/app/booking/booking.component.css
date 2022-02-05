@@ -1,0 +1,47 @@
+.clrr:hover{
+    background-color: rgba(128, 128, 128, 0.39);
+    }
+    .clr{
+        background-color:papayawhip;
+        
+    }
+    .clrr1:hover{
+        background-color: rgba(128, 128, 128, 0.39);
+        }
+    .clr1{
+        background-color:papayawhip;
+    }
+    .clrr2:hover{
+        background-color: rgba(128, 128, 128, 0.39);
+        }
+    .clr2{
+        background-color:papayawhip;
+    }
+    .clrr3:hover{
+        background-color: rgba(128, 128, 128, 0.39);
+        }
+    .clr3{
+        background-color:papayawhip;
+    }
+    .offerclrr{
+        background-color: rgb(145, 238, 241);
+        border-bottom:blue 3px solid ;
+    z-index: -1px;
+    }
+    .offerclr1:hover{
+    background-color: lightblue;
+    }
+    .regularclrr{
+        background-color:  rgb(145, 238, 241);
+        border-bottom:blue 3px solid ;
+    }
+    .regularclr1:hover{
+        background-color: lightblue;
+    }
+    .infoclrr{
+        background-color: rgb(145, 238, 241);
+        border-bottom:blue 3px solid ;
+    }
+    .infoclr1:hover{
+        background-color: lightblue;
+    }

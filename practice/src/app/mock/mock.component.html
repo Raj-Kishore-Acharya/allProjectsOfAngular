@@ -1,0 +1,20 @@
+<button type="submit" class="btn btn-success" (click)='onClick()'>Magic-1</button>
+<button type="submit" class="btn btn-warning" #magic2 (click)='onSubmit()'>Magic-2</button>
+<div>
+<table *ngIf= 'trick' >
+    <tr>
+        <td>name</td>
+        <td>age</td>
+        <td>gender</td>
+        <td>mail</td>
+    </tr>
+    <tr *ngFor='let value of details'>
+        <td>{{value.name}}</td>
+        <td>{{value.gender}}</td>
+        <td>{{value.age}}</td>
+        <td>{{value.email}}</td>
+    </tr>
+</table>
+</div>
+
+

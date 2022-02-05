@@ -1,0 +1,46 @@
+{
+  "details": [
+    {
+      "userName": "Raj Kishore Acharya",
+      "email": "raj@gmail.com",
+      "password": "123456",
+      "phone": 7504585688,
+      "id": 1
+    },
+    {
+      "userName": "Sudhansu",
+      "email": "situ@gmail.com",
+      "password": "123456",
+      "phone": 7978334988,
+      "id": 2
+    },
+    {
+      "userName": "Chinmaya Gouda",
+      "email": "chinu@gmail.com",
+      "password": "123456",
+      "phone": 8260999908,
+      "id": 3
+    },
+    {
+      "userName": "",
+      "email": "",
+      "password": "",
+      "phone": "",
+      "id": 4
+    },
+    {
+      "userName": "gagan",
+      "email": "gagan@gmail.com",
+      "password": "12345",
+      "phone": 8989899,
+      "id": 5
+    },
+    {
+      "userName": "Prasanna",
+      "email": "prasanna@gmail.com",
+      "password": "12345",
+      "phone": 456,
+      "id": 6
+    }
+  ]
+}
