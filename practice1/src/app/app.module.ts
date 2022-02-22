@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Comp1Component } from './comp1/comp1.component';
 import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
@@ -26,7 +26,8 @@ import { Comp3Component } from './comp3/comp3.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

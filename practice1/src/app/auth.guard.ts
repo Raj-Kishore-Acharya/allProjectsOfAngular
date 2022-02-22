@@ -12,7 +12,7 @@ export class AuthGuard implements CanActivate {
 
   constructor(private data : DataService) {}
   canActivate() {
-    if(this.data.logIn) {
+    if(this.data.logIn()) {
       return true;
     } else {
       return false;

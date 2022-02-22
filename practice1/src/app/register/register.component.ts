@@ -15,11 +15,6 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(data : NgForm) {
-    // let formData1 = [];
-    // formData1.push(data.value);
-    // localStorage.setItem('Data',JSON.stringify(formData1))
-    // this.route.navigate(['login'])
-    // data.reset()
 
     let userDetails = JSON.parse(localStorage.getItem('Data'));
     if(userDetails) {
