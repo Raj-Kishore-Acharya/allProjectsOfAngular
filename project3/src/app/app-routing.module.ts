@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddProductComponent } from './add-product/add-product.component';
 import { AuthGuard } from './auth.guard';
 import { CartComponent } from './cart/cart.component';
+import { DogApiComponent } from './dog-api/dog-api.component';
 import { LoginComponent } from './login/login.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ProductComponent } from './product/product.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path : 'products', component : ProductComponent},
   {path : 'addProducts', component : AddProductComponent, canActivate : [AuthGuard]},
   {path : 'cart', component : CartComponent, canActivate : [AuthGuard]},
-  {path : 'payment', component : PaymentComponent, canActivate : [AuthGuard]}
+  {path : 'payment', component : PaymentComponent, canActivate : [AuthGuard]},
+  {path : 'dogs', component : DogApiComponent}
 ];
 
 @NgModule({

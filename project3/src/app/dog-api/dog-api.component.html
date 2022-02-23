@@ -1,0 +1,18 @@
+<form class="form-inline my-2 my-lg-0">
+    <input type="text" list="dog" name="dogs" id="dogs" #dogName>
+    <datalist id="dog" >
+    <option *ngFor="let dog of dogs" value="{{dog}}">{{dog}}</option>
+    </datalist>
+    <button class="btn btn-primary mx-2" type="submit" (click)="search()">Search</button>
+</form>
+
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-md-4 mt-2" *ngFor= 'let product of images'>
+            <div class="card" style="background-color: sandybrown;" >
+                <img [src]="product" class="card-img-top" height="250px" width="250px">
+            </div>
+        </div>
+    </div>
+</div>
+

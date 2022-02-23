@@ -11,6 +11,7 @@ import { CartComponent } from './cart/cart.component';
 import { PaymentComponent } from './payment/payment.component';
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
+import { DogApiComponent } from './dog-api/dog-api.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     CartComponent,
-    PaymentComponent
+    PaymentComponent,
+    DogApiComponent
   ],
   imports: [
     BrowserModule,
