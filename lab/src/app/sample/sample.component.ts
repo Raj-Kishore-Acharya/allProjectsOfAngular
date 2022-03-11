@@ -8,11 +8,13 @@ import { LabService } from '../lab.service';
 })
 
 export class SampleComponent implements OnInit {
-  detail=true;
+  detail;
   detail1=false;
   detail2=false;
   detail3=false;
+  detail4;
   details;
+  details1;
   date = new Date();
   haematoData;
   haematoData1;
@@ -40,6 +42,17 @@ export class SampleComponent implements OnInit {
     this.data.glucoReport().subscribe((res)=> {
       this.glucoData=res
     })
+
+    this.details1= JSON.parse(localStorage.getItem("users"));
+    console.log(this.details1);
+    
+    if(this.details1.role == "admin") {
+      this.detail = true
+      this.detail4=false
+    } else {
+      this.detail4=true
+      this.detail = false
+    }
   }
 
   haemato(data) {
@@ -85,15 +98,74 @@ export class SampleComponent implements OnInit {
   }
 
   onClick() {
-    this.detail1 = false
-    this.detail = true
+
+    if(this.details1.role == "admin") {
+      this.detail1 = false
+      this.detail = true
+    } else if(this.details1.role == "user") {
+      this.detail1 = false
+      this.detail4 = true
+    }
+    
   }
   onClick1() {
-    this.detail = true
-    this.detail2 = false
+    if(this.details1.role == "admin") {
+      this.detail2 = false
+      this.detail = true
+    } else if(this.details1.role == "user") {
+      this.detail2 = false
+      this.detail4 = true
+    }
   }
   onClick2() {
-    this.detail = true
-    this.detail3 = false
+    if(this.details1.role == "admin") {
+      this.detail3 = false
+      this.detail = true
+    } else if(this.details1.role == "user") {
+      this.detail3 = false
+      this.detail4 = true
+    }
+  }
+
+  haemato1() {
+    this.haematoData.forEach((res)=> {
+      if(res.Name == this.details1.Name) {
+        this.haematoData1=res   
+         this.detail4=false;
+         this.detail1=true;
+         this.detail2= false;
+         this.detail3=false;
+      } else {
+        this.detail4 = true
+      }
+    })
+  }
+
+  thyro1() {
+    this.thyroData.forEach((res)=> {
+      if(res.Name == this.details1.Name) {
+        this.thyroData1=res
+        this.detail4=false;
+        this.detail1=false;
+        this.detail2= true;
+        this.detail3=false; 
+      } else {
+        this.detail4=true
+      }
+    })
+  }
+
+  gluco1() {
+    this.glucoData.forEach((res)=> {
+      if(res.Name == this.details1.Name) {
+        this.glucoData1 = res;
+        this.detail4=false;
+        this.detail1=false;
+        this.detail2= false;
+        this.detail3=true; 
+      } else {
+        this.detail4=true
+      }
+    })
   }
 }
