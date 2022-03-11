@@ -1,0 +1,30 @@
+<div class="image">
+    <div class="col-md-6 offset-md-4">
+        <div class="card x" style="width: 25rem;  background-color: rgb(214, 248,63 );">
+            <div class="card-header text-center">
+                <b> Enter Thyroid Profile Data</b>
+                <span class="float-end"><button type="button" class="btn-close" aria-label="Close" #data1></button></span>
+            </div>
+            <div class="card-body">
+                <form #thyroData="ngForm" (ngSubmit)="onSubmit(thyroData)">
+                    <div class="formGroup mt-2">
+                        <input type="text" class="form-control" placeholder="TRI IODO Thyronine-T3 Total*" name="Thyronine" required
+                            ngModel #thyronine="ngModel">
+                    </div>
+                    <div class="formGroup mt-3">
+                        <input type="text" class="form-control" placeholder="Thyroxine-T4*" name="Thyroxine"
+                            required ngModel #Thyroxine="ngModel">
+                    </div>
+                    <div class="formGroup mt-3">
+                        <input type="text" class="form-control" placeholder="Thyroid Stimulating Harmone(TSH)*" name="TSH"
+                            required ngModel #TSH="ngModel">
+                    </div>
+                    <div class="float-end">
+                        <button class="btn btn-primary mt-2" type="submit"
+                        [disabled]="thyroData.invalid">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

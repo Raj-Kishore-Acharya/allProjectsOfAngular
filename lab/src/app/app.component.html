@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(16, 243, 205) ;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="topnav-right" id="navbarNav" >
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link active" *ngIf="!this.data.isLoggedin()"  routerLink="Login"><b>Login</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" *ngIf="this.data.isLoggedin() && this.data.isAdmin()" routerLink="Register"><b>Register</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" *ngIf="this.data.isLoggedin()" routerLink="sample"><b>Sample</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" *ngIf="this.data.isLoggedin() && this.data.isAdmin()" routerLink="entersample"><b>Enter Sample</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active y" *ngIf="this.data.isLoggedin()" (click)="this.data.logout()"><b>Logout</b></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,67 @@
+{
+  "userDetails": [
+    {
+      "Name": "Raj",
+      "Email": "raj@gmail.com",
+      "pwd": "12345",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "Name": "Sai",
+      "Email": "sai@gmail.com",
+      "pwd": "12345",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "Name": "Pooja",
+      "Email": "pooja@gmail.com",
+      "pwd": "12345",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "Name": "gagan",
+      "Email": "gagan@gmail.com",
+      "pwd": "gagan",
+      "role": "user",
+      "id": 4
+    }
+  ],
+  "haematology": [
+    {
+      "Name": "Pooja",
+      "Haemoglobin": "10",
+      "totalWBC": "10",
+      "Neutrophils": "1",
+      "Lymphocytes": "00",
+      "Eosinophiles": "0",
+      "Monocytes": "0",
+      "Basophills": "1",
+      "RBC": "1",
+      "PCV": "1",
+      "MCV": "1",
+      "id": 1
+    }
+  ],
+  "thyroid": [
+    {
+      "Name": "Sai",
+      "Thyronine": "10",
+      "Thyroxine": "10",
+      "TSH": "10",
+      "id": 1
+    }
+  ],
+  "gluco": [
+    {
+      "Name": "Raj",
+      "Fastingsugar": "10",
+      "PrandialSugar": "10",
+      "HbA1C": "10",
+      "calcium": "10",
+      "id": 1
+    }
+  ]
+}

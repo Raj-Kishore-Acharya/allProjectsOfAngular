@@ -1,0 +1,11 @@
+.image{
+    background-image: url('https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 16cm;
+    width: 100%;
+}
+.x{
+    top: 2cm;
+}

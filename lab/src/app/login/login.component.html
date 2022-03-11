@@ -1,0 +1,27 @@
+<div class="image">
+<div class="col-md-6 offset-md-4">
+    <div class="card x" style="width: 25rem;  background-color: rgb(214, 248,63 );">
+        <div class="card-header text-center">
+         <b> Please Login </b> 
+        </div>
+        <div class="card-body">
+          <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+              <div class="formGroup mt-2">
+                <input type="email" class="form-control" placeholder="Enter your Email" name="Email" required ngModel #name="ngModel">
+              </div>
+              <div class="formGroup mt-3">
+                <input type="password" class="form-control" placeholder="Enter your Password" name="pwd" required ngModel #pwd="ngModel">
+              </div>
+              <div class="float-end">
+              <button class="btn btn-secondary mt-2" type="submit" [disabled]="loginForm.invalid">Login</button>
+              </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <a routerLink="/Register">Not Registered Yet ?? Click here to Register</a>
+        </div>
+      </div>
+</div>
+</div>
+
+<router-outlet></router-outlet>

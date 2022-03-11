@@ -1,0 +1,56 @@
+<div *ngIf="sample">
+<div class="image">
+    <div class="col-md-6 offset-md-4">
+        <div class="card x" style="width: 25rem; background-color: rgb(214, 248, 63);">
+            <div class="card-header">
+              Create Test
+            </div>
+            <div class="card-body">
+             <form #enterReport="ngForm" (ngSubmit)="onSubmit(enterReport)">
+                <div class="formGroup mt-3">
+                    <select class="form-select" id="type" name="PatientName"  ngModel #name>
+                      <option selected ></option>
+                      <option *ngFor="let user of patients" value="{{user.Name}}" >{{user.Name}}</option >
+                    </select>
+                </div>
+
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="checkbox" name="haemato" value="" id="flexCheckDefault" ngModel #haemato="ngModel">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Haematology
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="glu" value="" id="flexCheckDefault" ngModel #glu="ngModel">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Glucometry
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="thy" value="" id="flexCheckDefault" ngModel #thy="ngModel">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Thyroid Profile
+                    </label>
+                </div>
+                <div class="float-end">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+             </form>
+            </div>
+          </div>
+    </div>
+</div>
+</div>
+
+
+<div *ngIf="sample1">
+  <app-glucometry [nameField]="names"></app-glucometry>
+</div>
+
+<div *ngIf="sample2">
+  <app-haematology [nameField]="names"></app-haematology>
+</div>
+
+<div *ngIf="sample3">
+  <app-thyroid [nameField]="names"></app-thyroid>
+</div> 

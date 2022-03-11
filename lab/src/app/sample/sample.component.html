@@ -1,0 +1,167 @@
+<div class="image">
+  <div *ngIf="detail">
+    <div class="col-md-6">
+      <div class="card x ms-4" style="width: 80rem; background-color: rgb(27, 216, 68);">
+        <div class="card-header text-center">
+          <b>All Test Reports</b>
+          <input type="text" class="form-control" [(ngModel)]="inputName">
+          <button class="btn btn-primary mt-1">Search</button>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Sample Date</th>
+                <th scope="col">Patient Name</th>
+                <th scope="col">Email ID</th>
+                <th scope="col">Sample ID</th>
+                <th scope="col">Haematology</th>
+                <th scope="col">Thyroid Profile</th>
+                <th scope="col">Glucometry</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of details | pipe :inputName">
+                <th>{{date}}</th>
+                <td>{{data.Name}}</td>
+                <td>{{data.Email}}</td>
+                <td>{{data.id}}</td>
+                <td><button type="button" class="btn1" (click)="haemato(data)">View Detail</button></td>
+                <td><button type="button" class="btn1" (click)="thyro(data)">View Detail</button></td>
+                <td><button type="button" class="btn1" (click)="gluco(data)">View Detail</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="detail1">
+    <div class="col-md-6 offset-md-2">
+      <div class="card x" style="background-color: rgb(214, 248, 63);">
+        <div class="card-header text-center">
+          <b>{{haematoData1.Name}} - Haematology Report</b>
+          <span class="float-end"><button type="button" class="btn-close" aria-label="Close" (click)="onClick()"></button></span>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <tr>
+              <th scope="col">Test Name</th>
+              <th scope="col">Result</th>
+            </tr>
+            <tr>
+              <th scope="col">Basophills</th>
+              <th scope="col">{{haematoData1.Basophills}}</th>
+            </tr>
+            <tr>
+              <th scope="row">Eosinophiles</th>
+              <td scope="col">{{haematoData1.Eosinophiles}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Haemoglobin</th>
+              <th scope="col">{{haematoData1.Haemoglobin}}</th>
+            </tr>
+            <tr>
+              <th scope="col">Lymphocytes</th>
+              <th scope="col">{{haematoData1.Lymphocytes}}</th>
+            </tr>
+            <tr>
+              <th scope="col">MCV</th>
+              <th scope="col">{{haematoData1.MCV}}</th>
+            </tr>
+            <tr>
+              <th scope="col">Monocytes</th>
+              <th scope="col">{{haematoData1.Monocytes}}</th>
+            </tr>
+            <tr>
+              <th scope="col">Neutrophils</th>
+              <th scope="col">{{haematoData1.Neutrophils}}</th>
+            </tr>
+            <tr>
+              <th scope="col">PCV</th>
+              <th scope="col">{{haematoData1.PCV}}</th>
+            </tr>
+            <tr>
+              <th scope="col">RBC</th>
+              <th scope="col">{{haematoData1.RBC}}</th>
+            </tr>
+            <tr>
+              <th scope="col">totalWBC</th>
+              <th scope="col">{{haematoData1.totalWBC}}</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="detail2">
+    <div class="col-md-6 offset-md-2">
+      <div class="card x" style="background-color: rgb(214, 248, 63);">
+        <div class="card-header text-center">
+          <b>{{thyroData1.Name}} - Thyroid Report</b>
+          <span class="float-end"><button type="button" class="btn-close" aria-label="Close" (click)="onClick1()"></button></span>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <tr>
+              <th scope="col">Test Name</th>
+              <th scope="col">Result</th>
+            </tr>
+            <tr>
+              <th scope="row">Thyronine</th>
+              <td>{{thyroData1.Thyronine}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Thyroxine</th>
+              <td>{{thyroData1.Thyroxine}}</td>
+            </tr>
+            <tr>
+              <th scope="row">TSH</th>
+              <td>{{thyroData1.TSH}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="detail3">
+    <div class="col-md-6 offset-md-2">
+      <div class="card x" style="background-color: rgb(214, 248, 63);">
+        <div class="card-header text-center">
+          <b>{{glucoData1.Name}} - Glucometry Report</b>
+          <span class="float-end"><button type="button" class="btn-close" aria-label="Close" (click)="onClick2()"></button></span>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <tr>
+              <th scope="col">Test Name</th>
+              <th scope="col">Result</th>
+            </tr>
+            <tr>
+              <th scope="col">Fastingsugar</th>
+              <th scope="col">{{glucoData1.Fastingsugar}}</th>
+            </tr>
+            <tr>
+              <th scope="row">PrandialSugar</th>
+              <td>{{glucoData1.PrandialSugar}}</td>
+            </tr>
+            <tr>
+              <th scope="row">HbA1C</th>
+              <td>{{glucoData1.HbA1C}}</td>
+            </tr>
+            <tr>
+              <th scope="row">calcium</th>
+              <td>{{glucoData1.calcium}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

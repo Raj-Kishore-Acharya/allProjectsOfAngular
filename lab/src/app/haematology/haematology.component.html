@@ -1,0 +1,49 @@
+<div class="image">
+    <div class="col-md-6 offset-md-2">
+        <div class="card x" style="width: 55rem; background-color: rgb(214, 248, 63);">
+            <div class="card-header text-center">
+                <b> Enter Haematology Report </b>
+                <span class="float-end"><button type="button" class="btn-close" aria-label="Close" #data1></button></span>
+            </div>
+            <div class="card-body">
+                <form #haemaReport="ngForm" (ngSubmit)="onSubmit(haemaReport)">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Haemoglobin*" ngModel name="Haemoglobin" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Total Count/WBC" ngModel name="totalWBC">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Neutrophils" ngModel name="Neutrophils" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Lymphocytes" ngModel name="Lymphocytes">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Eosinophiles" ngModel name="Eosinophiles">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Monocytes" ngModel name="Monocytes" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Basophills" ngModel name="Basophills">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Red Blood Cells(RBC)" ngModel name="RBC">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Packed Cell Volume(PCV)" ngModel name="PCV">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="MEAN Corpuscular Volume(MCV)" ngModel name="MCV" required>
+                        </div>
+                    </div>
+                    <div class="float-end mt-3">
+                        <button type="submit" class="btn btn-secondary" [disabled]="haemaReport.invalid">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>j

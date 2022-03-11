@@ -1,0 +1,33 @@
+<div class="image">
+    <div class="col-md-6 offset-md-4">
+        <div class="card x" style="width: 25rem;  background-color: rgb(214, 248,63 );">
+            <div class="card-header text-center">
+                <b> Add Glucometry Report </b>
+                <span class="float-end"><button type="button" class="btn-close" aria-label="Close" #data1></button></span>
+            </div>
+            <div class="card-body">
+                <form #glucoData="ngForm" (ngSubmit)="onSubmit(glucoData)">
+                    <div class="formGroup mt-2">
+                        <input type="text" class="form-control" placeholder="Fasting Blood Sugar" name="Fastingsugar"
+                            required ngModel #Fastingsuga="ngModel">
+                    </div>
+                    <div class="formGroup mt-3">
+                        <input type="text" class="form-control" placeholder="Post Prandial Blood Sugar"
+                            name="PrandialSugar" required ngModel #PrandialSugar="ngModel">
+                    </div>
+                    <div class="formGroup mt-3">
+                        <input type="text" class="form-control" placeholder="Glycosylated Haemoglobin(HbA1C)"
+                            name="HbA1C" required ngModel #Glycosylated="ngModel">
+                    </div>
+                    <div class="formGroup mt-3">
+                        <input type="text" class="form-control" placeholder="Calcium" name="calcium" required ngModel
+                            #calcium="ngModel">
+                    </div>
+                    <div class="float-end">
+                        <button class="btn btn-primary mt-2" type="submit" [disabled]="glucoData.invalid">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
